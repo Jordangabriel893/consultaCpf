@@ -1,0 +1,69 @@
+<section class="info col-12">
+  <h1>Informe o CPF do futuro cooperado (a)</h1>
+  <p>Se necessário, você poderá duplicar uma conta existente ou pausar e retomar este cadastro futuramente</p>
+  <p>Digite apenas os numeros (sem pontos ou traços).</p>
+</section>
+
+<section class="consulta d-flex flex-column col-12">
+  <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+    <label for="cpf">CPF</label>
+
+    <div class="search-cpf d-flex justify-content-between col-5">
+      <input type="text" id="cpf" placeholder="000.000.000-00" name="cpf" formControlName="cpf">
+      <button type="button" class="btn btn-primary" [disabled]="!formulario.valid" (click)="getCooperado()">Consultar
+        por CPF</button>
+    </div>
+
+  </form>
+  <ng-template [ngIf]="!cpf.pristine && cpf.errors">
+    <p class="validation-message" *ngIf="cpf.errors.required">CPF é obrigatório.</p>
+    <p class="validation-message" *ngIf="cpf.errors.cpfInvalido">
+      Digite um CPF válido
+    </p>
+  </ng-template>
+
+</section>
+<section class="section-spinner d-flex justify-content-center  col-3" *ngIf="loading">
+  <div class="spinner"> </div>
+</section>
+
+<ng-template [ngIf]="hasCooperado && formulario.valid">
+  <section class="card-person col-12">
+    <div class="card">
+
+      <div class="titulo col-12">
+        <h3>Situação cadastral do CPF</h3>
+        <p>Consulta na Receita Federal</p>
+      </div>
+
+      <div class="card-info col-12">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill"
+          viewBox="0 0 16 16">
+          <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+        </svg>
+        <div class="person-info">
+          <label>Nome</label>
+          <p>{{name}}</p>
+        </div>
+
+      </div>
+      <div class="card-info col-12" *ngIf="situationCpf">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle"
+          viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+          <path
+            d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z" />
+        </svg>
+        <div class="person-info">
+          <label>Situação do CPF</label>
+          <p>Regular</p>
+        </div>
+
+      </div>
+    </div>
+
+
+  </section>
+
+</ng-template>

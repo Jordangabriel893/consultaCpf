@@ -1,0 +1,139 @@
+
+.info {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  margin-left: 3vh;
+}
+
+.info h1 {
+  color: black;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.info p {
+  margin: 0;
+  color: rgb(104, 104, 104);
+  font-size: 1rem;
+}
+
+.consulta {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  margin-left: 3vh;
+}
+
+label {
+  color: black;
+  font-weight: 700;
+}
+
+.search-cpf {
+  padding: 0;
+}
+
+.search-cpf input {
+  width: 22vw;
+  border: 1px solid #bcbcbc;
+}
+
+.search-cpf button {
+  width: 14vw;
+  background-color: rgb(9, 91, 138);
+}
+
+.card-person {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  margin-left: 3vh;
+
+}
+
+.card {
+  width: 22vw;
+}
+
+.titulo {
+  padding-top: 2.5vh;
+  padding-left: 2.5vh;
+}
+
+.titulo h3 {
+  color: black;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.titulo p {
+  color: rgb(104, 104, 104);
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  padding-top: 2.5vh;
+  padding-left: 2.5vh;
+}
+
+.card-info svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  margin-right: 2vh;
+  fill: #7e7e7e;
+}
+
+.card-info div label {
+  margin: 0;
+  color: rgb(150, 150, 150);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.person-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.person-info p {
+  margin: 0;
+}
+
+.card-info:nth-child(3) {
+  margin-bottom: 3vh;
+}
+
+.card-info:nth-child(3) svg {
+  fill: green;
+}
+
+.validation-message {
+  color: red;
+  margin-top: 1vh;
+  margin-bottom: 0;
+}
+
+/* Spinner */
+.section-spinner {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  margin-left: 3vh;
+}
+
+.spinner {
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-left-color: rgb(9, 91, 138);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.5s linear infinite;
+
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
