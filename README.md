@@ -9,8 +9,8 @@ Aplicação desenvolvida para consulta de cpfs válidos de um novo cooperado.
 * Angular, CSS3, HTML5, TypeScript, 
 
 ## :rocket: Rodando o projeto
-Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto: npm install,
-Deve-se ter a seguinte versão do node: 14.17.6
+* Para rodar o repositório é necessário clonar o mesmo, dar o seguinte comando para iniciar o projeto: npm install,
+* Deve-se ter a seguinte versão do node: 14.17.6
 
 ## :dart: Status do projeto
 Completo
