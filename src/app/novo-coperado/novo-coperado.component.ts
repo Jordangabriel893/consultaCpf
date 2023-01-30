@@ -38,7 +38,12 @@ export class NovoCoperadoComponent implements OnInit {
       this.loading = false;
     }, 3000);
   }
-
+  verificaInput(){
+    const cpf = this.formulario.value.cpf;
+    if(cpf.length < 11){
+      this.hasCooperado = false;
+    }
+  }
   get cpf() {
     return this.formulario.get('cpf');
   }

@@ -7,6 +7,9 @@
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
+    "test-common": "ng test --browsers Chrome,Firefox",
+    "test-ci": "ng test --watch=false --reporters junit --browsers ChromeHeadless,FirefoxSemCabeca",
+    "test-coverage": "ng test --watch=false --sourceMap=true --codeCoverage=true --browsers ChromeHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
@@ -33,7 +36,7 @@
     "@angular/cli": "~1.7.4",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
-    "@types/jasmine": "~2.8.3",
+    "@types/jasmine": "^2.8.19",
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "^4.0.1",
@@ -42,11 +45,12 @@
     "karma": "~2.0.0",
     "karma-chrome-launcher": "~2.2.0",
     "karma-coverage-istanbul-reporter": "^1.2.1",
-    "karma-jasmine": "~1.1.0",
+    "karma-jasmine": "^4.0.2",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-junit-reporter": "^2.0.1",
     "protractor": "~5.1.2",
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
-    "typescript": "~2.5.3"
+    "typescript": "^2.9.2"
   }
 }
